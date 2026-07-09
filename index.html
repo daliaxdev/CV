@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Dalia Ifêmi Deguenonvo</title>
-    <!-- Bootstrap 5 CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
         body {
@@ -34,7 +32,7 @@
             flex: 1;
         }
 
-        /* Forme géométrique d'en-tête discrète */
+        /* Decorative top accent background shape */
         .bg-shape-top {
             position: absolute;
             top: -50px;
@@ -46,14 +44,14 @@
             z-index: 1;
         }
 
-        /* Vague de pied de page en Rouge Bordeaux Professionnel */
+        /* Emerald Green Bottom Footer Wave Accent */
         .bg-shape-footer {
             position: absolute;
             bottom: 0;
             left: 0;
             width: 100%;
             height: 45px;
-            background: #8b1e24;
+            background: #046307;  /* Emerald Green styling */
             clip-path: polygon(0 40%, 30% 15%, 70% 85%, 100% 0, 100% 100%, 0 100%);
             z-index: 1;
             opacity: 0.95;
@@ -76,13 +74,13 @@
         .candidate-title {
             font-size: 1.2rem;
             font-weight: 700;
-            color: #8b1e24;
+            color: #046307; /* Emerald Green styling */
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-top: 0.4rem;
         }
 
-        /* Column Lines */
+        /* Column Layout Lines */
         .left-side {
             border-right: 1px solid #cbd5e1;
             padding-right: 1.5rem;
@@ -91,7 +89,7 @@
             padding-left: 1.5rem;
         }
 
-        /* Section Typography & Titles with Logos */
+        /* Section Titles with Icons */
         h2.section-title {
             font-size: 1.15rem;
             font-weight: 800;
@@ -104,18 +102,18 @@
             align-items: center;
         }
         h2.section-title i.section-logo {
-            color: #8b1e24;
+            color: #046307; /* Emerald Green styling */
             font-size: 1.25rem;
-            margin-left: 0.5rem; /* Positionné juste après le texte du titre */
+            margin-left: 0.5rem;
         }
         hr.section-divider {
-            border-top: 2px solid #8b1e24;
+            border-top: 2px solid #046307; /* Emerald Green styling */
             opacity: 1;
             margin-top: 0;
             margin-bottom: 1rem;
         }
 
-        /* Items styling */
+        /* Entries blocks formatting */
         .item-block {
             margin-bottom: 1rem;
         }
@@ -127,7 +125,7 @@
         .item-role {
             font-size: 0.9rem;
             font-weight: 700;
-            color: #8b1e24;
+            color: #046307; /* Emerald Green styling */
         }
         .item-duration {
             font-size: 0.8rem;
@@ -141,7 +139,7 @@
             margin-bottom: 0;
         }
 
-        /* Contact list */
+        /* Contact layout link styling */
         .contact-list a {
             color: #111111;
             text-decoration: none;
@@ -149,14 +147,14 @@
         }
         .contact-list a:hover {
             text-decoration: underline;
-            color: #8b1e24;
+            color: #046307;
         }
         .contact-list i {
-            color: #8b1e24;
+            color: #046307;
             width: 20px;
         }
 
-        /* Minimal list tags */
+        /* Skills tags lists mapping */
         .tag-item {
             color: #111111;
             padding: 0.15rem 0;
@@ -165,7 +163,7 @@
             align-items: center;
         }
         .tag-item i {
-            color: #8b1e24;
+            color: #046307;
         }
         
         .tech-category {
@@ -174,11 +172,11 @@
             margin-top: 0.25rem;
         }
 
-        /* Print fixes */
+        /* Responsive Print overrides optimization layout sheets */
         @media print {
             body { background-color: #ffffff; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
             .cv-container { box-shadow: none; max-width: 100%; margin: 0 !important; }
-            .bg-shape-footer { background: #8b1e24 !important; }
+            .bg-shape-footer { background: #046307 !important; }
             .row { display: flex !important; flex-direction: row !important; }
             .col-md-4 { width: 33.333% !important; }
             .col-md-8 { width: 66.666% !important; }
@@ -189,20 +187,16 @@
 <body>
 
 <div class="container cv-container p-0 my-4">
-    <!-- Background element top -->
     <div class="bg-shape-top d-print-none"></div>
     
     <div class="cv-content">
-        <!-- HEADER ROW -->
         <div class="header-section">
             <h1 class="candidate-name">Dalia DEGUENONVO</h1>
             <div class="candidate-title">BSc Student in Statistics & Computer Science</div>
         </div>
 
-        <!-- MAIN BODY ROW -->
         <div class="row g-0">
             
-            <!-- LEFT COLUMN (Contact, Education, Skills, Languages, Interests) -->
             <div class="col-md-4 left-side">
                 
                 <h2 class="section-title">CONTACT <i class="bi bi-person-vcard-fill section-logo"></i></h2>
@@ -229,7 +223,7 @@
                     <div class="item-duration">2023 - 2024</div>
                 </div>
 
-                <h2 class="section-title">EXPERTISE <i class="bi bi-code-slash section-logo"></i></h2>
+                <h2 class="section-title">EXPERTISES <i class="bi bi-code-slash section-logo"></i></h2>
                 <hr class="section-divider">
                 <div class="mb-4 small">
                     <div class="tech-category">Programming:</div>
@@ -242,42 +236,41 @@
                     <div class="text-dark">SQL, MySQL, Bootstrap 5, AdminLTE, WampServer, Git, GitHub, UML, Android Studio</div>
                 </div>
 
-                <h2 class="section-title">LANGUES <i class="bi bi-translate section-logo"></i></h2>
+                <h2 class="section-title">LANGUAGES <i class="bi bi-translate section-logo"></i></h2>
                 <hr class="section-divider">
                 <div class="mb-4 small">
-                    <div class="tag-item"><i class="bi bi-caret-right-fill me-2"></i><span><b>Français :</b> Langue maternelle / bilingue</span></div>
-                    <div class="tag-item"><i class="bi bi-caret-right-fill me-2"></i><span><b>Anglais :</b> Professionnel</span></div>
-                    <div class="tag-item"><i class="bi bi-caret-right-fill me-2"></i><span><b>Fon :</b> Native</span></div>
+                    <div class="tag-item"><i class="bi bi-caret-right-fill me-2"></i><span><b>French:</b> Fluent</span></div>
+                    <div class="tag-item"><i class="bi bi-caret-right-fill me-2"></i><span><b>English:</b> Bilingual</span></div>
+                    <div class="tag-item"><i class="bi bi-caret-right-fill me-2"></i><span><b>Fon:</b> Native</span></div>
                 </div>
 
-                <h2 class="section-title">INTÉRÊTS <i class="bi bi-heart-fill section-logo"></i></h2>
+                <h2 class="section-title">INTERESTS <i class="bi bi-heart-fill section-logo"></i></h2>
                 <hr class="section-divider">
                 <div class="small mb-4">
-                    <div class="tag-item"><i class="bi bi-chevron-right me-1"></i>Intelligence Artificielle</div>
-                    <div class="tag-item"><i class="bi bi-chevron-right me-1"></i>Modélisation quantitative</div>
-                    <div class="tag-item"><i class="bi bi-chevron-right me-1"></i>Dessin et peinture</div>
-                    <div class="tag-item"><i class="bi bi-chevron-right me-1"></i>Tennis et littérature</div>
+                    <div class="tag-item"><i class="bi bi-chevron-right me-1"></i>Artificial Intelligence</div>
+                    <div class="tag-item"><i class="bi bi-chevron-right me-1"></i>Modeling & Programming</div>
+                    <div class="tag-item"><i class="bi bi-chevron-right me-1"></i>Drawing & Painting</div>
+                    <div class="tag-item"><i class="bi bi-chevron-right me-1"></i>Reading & Tennis</div>
                 </div>
 
             </div>
 
-            <!-- RIGHT COLUMN (Profile summary, Projects, Certifications) -->
             <div class="col-md-8 right-side">
                 
                 <h2 class="section-title">PROFILE <i class="bi bi-person-fill section-logo"></i></h2>
                 <hr class="section-divider">
                 <p class="item-text mb-4">
-                    Rigorous and analytical Computer Science and Statistics student with a strong foundation in quantitative analysis, software engineering, and database management. Proven capability in developing end-to-end web architectures and deploying data-driven solutions. Highly adaptable and eager to contribute to international development goals, multi-stakeholder initiatives, and impact-oriented technological frameworks.
+                    Rigorous and analytical Computer Science and Statistics student with a strong foundation in quantitative analysis, software engineering, and database management. Capable of developing end-to-end web architectures and deploying data-driven solutions. Highly adaptable and eager to contribute to international development goals, multi-stakeholder initiatives, and impact-oriented technological frameworks.
                 </p>
 
-                <h2 class="section-title">WORK EXPERIENCE / PROJECTS <i class="bi bi-briefcase-fill section-logo"></i></h2>
+                <h2 class="section-title">PERSONAL PROJECTS <i class="bi bi-briefcase-fill section-logo"></i></h2>
                 <hr class="section-divider">
 
                 <div class="item-block">
                     <div class="item-company">SchoolMate — Mobile Academic Tracking Application</div>
                     <div class="item-duration">Academic & Software Project | 2026</div>
                     <p class="item-text">
-                        Designed and co-developed a mobile application ecosystem aiming to digitalize pedagogical monitoring and bridge the gap between students, parents, and academic administrations within the Beninese educational framework. Implemented modular UI workflows and relational cross-referencing.
+                        Designed and co-developed a mobile application ecosystem aiming to digitalize pedagogical monitoring and bridge the gap between students, parents, and academic administrations within the Beninese educational framework. Implemented modular UI workflows and relational cross-referencing systems.
                     </p>
                 </div>
 
@@ -301,15 +294,15 @@
                 <hr class="section-divider">
                 <div class="small">
                     <div class="d-flex justify-content-between align-items-center mb-2">
-                        <span><i class="bi bi-check-circle-fill text-danger me-2"></i><b>Applied Data Science Lab</b> — WorldQuant University</span>
+                        <span><i class="bi bi-check-circle-fill text-success me-2"></i><b>Applied Data Science Lab</b> — WorldQuant University</span>
                         <span class="text-dark fst-italic">In Progress</span>
                     </div>
                     <div class="d-flex justify-content-between align-items-center mb-2">
-                        <span><i class="bi bi-check-circle-fill text-danger me-2"></i><b>JavaScript Algorithms and Data Structures</b> — freeCodeCamp</span>
+                        <span><i class="bi bi-check-circle-fill text-success me-2"></i><b>JavaScript Algorithms and Data Structures</b> — freeCodeCamp</span>
                         <span class="text-dark fst-italic">In Progress</span>
                     </div>
                     <div class="d-flex justify-content-between align-items-center">
-                        <span><i class="bi bi-check-circle-fill text-danger me-2"></i><b>Web Development Foundations & SQL</b> — OpenClassrooms</span>
+                        <span><i class="bi bi-check-circle-fill text-success me-2"></i><b>Web Development Foundations & SQL</b> — OpenClassrooms</span>
                         <span class="text-dark fst-italic">In Progress</span>
                     </div>
                 </div>
@@ -319,7 +312,6 @@
         </div>
     </div>
     
-    <!-- Background element bottom -->
     <div class="bg-shape-footer"></div>
 </div>
 
