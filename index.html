@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Dalia Ifêmi Deguenonvo</title>
+    <title>CV - Dalia DEGUENONVO</title>
     <!-- Chargement de Bootstrap via CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Icones Bootstrap -->
@@ -19,7 +19,7 @@
             background-color: #ffffff;
             min-height: 100vh;
         }
-        /* En-tête sombre stylisé uniquement pour la colonne de droite */
+        /* En-tête sombre stylisé à droite */
         .cv-header {
             background-color: #232936;
             color: #ffffff;
@@ -43,8 +43,9 @@
         .cv-header a:hover {
             text-decoration: underline !important;
         }
+        /* Icônes de l'en-tête en vert émeraude */
         .cv-header i {
-            color: #3b82f6 !important; /* Couleur bleue pour les icônes de contacts comme lui */
+            color: #115c3a !important; 
         }
         /* Colonne de gauche (Gris clair / Tech) */
         .left-column {
@@ -69,16 +70,18 @@
             margin-top: 1.5rem;
             margin-bottom: 0.2rem;
         }
+        /* Icônes des titres en vert émeraude */
         h2.section-title i {
-            color: #4f46e5;
+            color: #115c3a;
         }
+        /* Ligne de séparation sous les titres en vert émeraude */
         hr.section-hr {
             margin-top: 0;
             margin-bottom: 1.5rem;
-            opacity: 0.2;
-            border-top: 2px solid #4f46e5;
+            opacity: 0.3;
+            border-top: 2px solid #115c3a;
         }
-        /* Alignement forcé pour les lignes (Titre à gauche, Badge à droite) */
+        /* Alignement forcé sur une ligne (Titre à gauche, Badge à droite) */
         .item-row {
             display: flex;
             justify-content: space-between;
@@ -88,13 +91,14 @@
         .item-title-block {
             padding-right: 10px;
         }
-        /* Style des badges de date */
+        /* Badges des dates en vert émeraude */
         .date-badge {
             font-size: 0.8rem !important;
             font-weight: 600;
             padding: 0.4rem 0.6rem;
             white-space: nowrap;
-            background-color: #4f46e5 !important;
+            background-color: #115c3a !important;
+            color: #ffffff !important;
         }
         /* Barres de progression */
         .skill-item {
@@ -112,8 +116,9 @@
             border-radius: 4px;
             background-color: #e9ecef;
         }
+        /* Couleur verte émeraude pour les barres */
         .progress-bar {
-            background-color: #4f46e5;
+            background-color: #115c3a;
             border-radius: 4px;
         }
         .skill-desc {
@@ -131,9 +136,11 @@
             margin-bottom: 0.7rem;
             font-size: 0.95rem;
         }
+        /* Icônes de liste en vert émeraude */
         .custom-list i, .skill-info i {
-            color: #4f46e5 !important;
+            color: #115c3a !important;
         }
+        /* Badges d'intérêt */
         .interest-badge {
             display: inline-block;
             background-color: #ffffff;
@@ -145,14 +152,43 @@
             font-weight: 500;
         }
         .interest-badge i {
-            color: #4f46e5;
+            color: #115c3a;
         }
+        /* Liens de texte en vert émeraude */
         .text-primary {
-            color: #4f46e5 !important;
+            color: #115c3a !important;
             text-decoration: none;
         }
         a.text-primary:hover {
             text-decoration: underline !important;
+            color: #0a3d25 !important;
+        }
+
+        /* LE BLOC D'IMPRESSION EST AJOUTÉ ICI, JUSTE AVANT LA FIN */
+        @media print {
+            body {
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                background-color: #f4f6f9 !important;
+            }
+            .row {
+                display: flex !important;
+                flex-direction: row !important;
+                flex-wrap: nowrap !important;
+            }
+            .col-lg-4 {
+                width: 33.333% !important;
+            }
+            .col-lg-8 {
+                width: 66.666% !important;
+            }
+            @page {
+                margin: 0;
+                size: auto;
+            }
+            .container-fluid {
+                padding: 0 !important;
+            }
         }
     </style>
 </head>
@@ -162,7 +198,7 @@
     <div class="cv-wrapper">
         <div class="row g-0">
             
-            <!-- COLONNE GAUCHE -->
+            <!-- COLONNE GAUCHE (Compétences & Infos secondaires) -->
             <div class="col-lg-4 left-column">
                 <h2 class="section-title">STATISTIQUES & ANALYSE <i class="bi bi-bar-chart-line"></i></h2>
                 <hr class="section-hr">
@@ -239,9 +275,9 @@
                 <h2 class="section-title mt-5">LANGUES <i class="bi bi-translate"></i></h2>
                 <hr class="section-hr">
                 <ul class="custom-list">
-                    <li><i class="bi bi-caret-right-fill"></i><b>Français :</b> Courant / Enseignement</li>
-                    <li><i class="bi bi-caret-right-fill"></i><b>Anglais :</b> Bilingue</li>
-                    <li><i class="bi bi-caret-right-fill"></i><b>Fon :</b> Maternelle</li>
+                    <li><i class="bi bi-check-circle-fill"></i><b>Français :</b> Courant / Enseignement</li>
+                    <li><i class="bi bi-check-circle-fill"></i><b>Anglais :</b> Bilingue</li>
+                    <li><i class="bi bi-check-circle-fill"></i><b>Fon :</b> Maternelle</li>
                 </ul>
 
                 <h2 class="section-title mt-5">CENTRES D'INTÉRÊT <i class="bi bi-heart"></i></h2>
@@ -255,17 +291,17 @@
                 </div>
             </div>
 
-            <!-- COLONNE DROITE -->
+            <!-- COLONNE DROITE (Identité sombre & Contenu principal) -->
             <div class="col-lg-8 right-column">
                 
-                <!-- EN-TÊTE SOMBRE INTEGRÉ À DROITE -->
+                <!-- EN-TÊTE SOMBRE AVEC CONTACTS VERTS ÉMERAUDE -->
                 <div class="cv-header">
                     <h1 class="text-white mb-2">Dalia DEGUENONVO</h1>
                     <p class="lead mb-4">Étudiante en Informatique & Statistiques</p>
                     <hr class="opacity-25 my-3">
                     <div class="row g-3 small">
                         <div class="col-sm-6"><i class="bi bi-envelope-fill me-2"></i><a href="mailto:deguenonvodalia2@gmail.com">deguenonvodalia2@gmail.com</a></div>
-                        <div class="col-sm-6"><i class="bi bi-telephone-fill me-2"></i>+229 XX XX XX XX</div>
+                        <div class="col-sm-6"><i class="bi bi-telephone-fill me-2"></i>+229 01 67 01 47 13</div>
                         <div class="col-sm-6"><i class="bi bi-github me-2"></i><a href="https://github.com/daliaxdev" target="_blank">Voir mon GitHub</a></div>
                         <div class="col-sm-6"><i class="bi bi-geo-alt-fill me-2"></i>Abomey-Calavi, Bénin</div>
                     </div>
