@@ -1,410 +1,326 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - Dalia DEGUENONVO</title>
-    <!-- Chargement de Bootstrap via CDN -->
+    <title>CV - Dalia Ifêmi Deguenonvo</title>
+    <!-- Bootstrap 5 CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Icones Bootstrap -->
+    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <style>
         body {
-            background-color: #f4f6f9;
-            color: #333;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f8;
+            color: #111111;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            font-size: 0.88rem;
+            line-height: 1.4;
         }
-        /* Utilisation de toute la largeur de l'écran */
-        .cv-wrapper {
+        .cv-container {
+            max-width: 850px;
             background-color: #ffffff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
             min-height: 100vh;
-        }
-        /* En-tête sombre stylisé à droite */
-        .cv-header {
-            background-color: #232936;
-            color: #ffffff;
-            padding: 2rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-        }
-        .cv-header h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-        }
-        .cv-header .lead {
-            color: #a0aec0 !important;
-            font-size: 1.1rem;
-        }
-        .cv-header a {
-            color: #ffffff !important;
-            text-decoration: none;
-        }
-        .cv-header a:hover {
-            text-decoration: underline !important;
-        }
-        /* Icônes de l'en-tête en vert émeraude */
-        .cv-header i {
-            color: #115c3a !important; 
-        }
-        /* Colonne de gauche (Gris clair / Tech) */
-        .left-column {
-            background-color: #f8f9fa;
-            padding: 3rem 2rem;
-            border-right: 1px solid #e9ecef;
-        }
-        /* Colonne de droite (Contenu) */
-        .right-column {
-            padding: 3rem 2.5rem;
-        }
-        /* Titres de sections */
-        h2.section-title {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: #212529;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            position: relative;
+            overflow: hidden;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 1.5rem;
-            margin-bottom: 0.2rem;
-        }
-        /* Icônes des titres en vert émeraude */
-        h2.section-title i {
-            color: #115c3a;
-        }
-        /* Ligne de séparation sous les titres en vert émeraude */
-        hr.section-hr {
-            margin-top: 0;
-            margin-bottom: 1.5rem;
-            opacity: 0.3;
-            border-top: 2px solid #115c3a;
-        }
-        /* Alignement forcé sur une ligne (Titre à gauche, Badge à droite) */
-        .item-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            width: 100%;
-        }
-        .item-title-block {
-            padding-right: 10px;
-        }
-        /* Badges des dates en vert émeraude */
-        .date-badge {
-            font-size: 0.8rem !important;
-            font-weight: 600;
-            padding: 0.4rem 0.6rem;
-            white-space: nowrap;
-            background-color: #115c3a !important;
-            color: #ffffff !important;
-        }
-        /* Barres de progression */
-        .skill-item {
-            margin-bottom: 1.2rem;
-        }
-        .skill-info {
-            display: flex;
-            justify-content: space-between;
-            font-weight: 600;
-            font-size: 0.95rem;
-            margin-bottom: 0.3rem;
-        }
-        .progress {
-            height: 8px;
-            border-radius: 4px;
-            background-color: #e9ecef;
-        }
-        /* Couleur verte émeraude pour les barres */
-        .progress-bar {
-            background-color: #115c3a;
-            border-radius: 4px;
-        }
-        .skill-desc {
-            font-size: 0.85rem;
-            color: #6c757d;
-            display: block;
-            margin-top: 0.2rem;
-        }
-        /* Listes */
-        .custom-list {
-            list-style: none;
-            padding-left: 0;
-        }
-        .custom-list li {
-            margin-bottom: 0.7rem;
-            font-size: 0.95rem;
-        }
-        /* Icônes de liste en vert émeraude */
-        .custom-list i, .skill-info i {
-            color: #115c3a !important;
-        }
-        /* Badges d'intérêt */
-        .interest-badge {
-            display: inline-block;
-            background-color: #ffffff;
-            border: 1px solid #dee2e6;
-            padding: 0.4rem 0.8rem;
-            border-radius: 20px;
-            margin: 0.25rem;
-            font-size: 0.85rem;
-            font-weight: 500;
-        }
-        .interest-badge i {
-            color: #115c3a;
-        }
-        /* Liens de texte en vert émeraude */
-        .text-primary {
-            color: #115c3a !important;
-            text-decoration: none;
-        }
-        a.text-primary:hover {
-            text-decoration: underline !important;
-            color: #0a3d25 !important;
+            flex-direction: column;
         }
 
-        /* LE BLOC D'IMPRESSION EST AJOUTÉ ICI, JUSTE AVANT LA FIN */
+        .cv-content {
+            position: relative;
+            z-index: 2;
+            padding: 2.5rem 2.5rem 5rem 2.5rem;
+            flex: 1;
+        }
+
+        /* Forme géométrique d'en-tête discrète */
+        .bg-shape-top {
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 250px;
+            height: 250px;
+            background: linear-gradient(135deg, rgba(139, 30, 36, 0.03) 0%, rgba(139, 30, 36, 0.07) 100%);
+            transform: rotate(45deg);
+            z-index: 1;
+        }
+
+        /* Vague de pied de page en Rouge Bordeaux Professionnel */
+        .bg-shape-footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 45px;
+            background: #8b1e24;
+            clip-path: polygon(0 40%, 30% 15%, 70% 85%, 100% 0, 100% 100%, 0 100%);
+            z-index: 1;
+            opacity: 0.95;
+        }
+
+        /* Name Header Area */
+        .header-section {
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #cbd5e1;
+            padding-bottom: 1.5rem;
+        }
+        .candidate-name {
+            font-size: 2.6rem;
+            font-weight: 800;
+            color: #000000;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            line-height: 1.1;
+        }
+        .candidate-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #8b1e24;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 0.4rem;
+        }
+
+        /* Column Lines */
+        .left-side {
+            border-right: 1px solid #cbd5e1;
+            padding-right: 1.5rem;
+        }
+        .right-side {
+            padding-left: 1.5rem;
+        }
+
+        /* Section Typography & Titles with Logos */
+        h2.section-title {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: #000000;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.4rem;
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        h2.section-title i.section-logo {
+            color: #8b1e24;
+            font-size: 1.25rem;
+            margin-left: 0.5rem; /* Positionné juste après le texte du titre */
+        }
+        hr.section-divider {
+            border-top: 2px solid #8b1e24;
+            opacity: 1;
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        /* Items styling */
+        .item-block {
+            margin-bottom: 1rem;
+        }
+        .item-company {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #000000;
+        }
+        .item-role {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: #8b1e24;
+        }
+        .item-duration {
+            font-size: 0.8rem;
+            color: #334155;
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+        }
+        .item-text {
+            color: #111111;
+            text-align: justify;
+            margin-bottom: 0;
+        }
+
+        /* Contact list */
+        .contact-list a {
+            color: #111111;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .contact-list a:hover {
+            text-decoration: underline;
+            color: #8b1e24;
+        }
+        .contact-list i {
+            color: #8b1e24;
+            width: 20px;
+        }
+
+        /* Minimal list tags */
+        .tag-item {
+            color: #111111;
+            padding: 0.15rem 0;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+        }
+        .tag-item i {
+            color: #8b1e24;
+        }
+        
+        .tech-category {
+            font-weight: 700;
+            color: #000000;
+            margin-top: 0.25rem;
+        }
+
+        /* Print fixes */
         @media print {
-            body {
-                -webkit-print-color-adjust: exact !important;
-                print-color-adjust: exact !important;
-                background-color: #f4f6f9 !important;
-            }
-            .row {
-                display: flex !important;
-                flex-direction: row !important;
-                flex-wrap: nowrap !important;
-            }
-            .col-lg-4 {
-                width: 33.333% !important;
-            }
-            .col-lg-8 {
-                width: 66.666% !important;
-            }
-            @page {
-                margin: 0;
-                size: auto;
-            }
-            .container-fluid {
-                padding: 0 !important;
-            }
+            body { background-color: #ffffff; -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+            .cv-container { box-shadow: none; max-width: 100%; margin: 0 !important; }
+            .bg-shape-footer { background: #8b1e24 !important; }
+            .row { display: flex !important; flex-direction: row !important; }
+            .col-md-4 { width: 33.333% !important; }
+            .col-md-8 { width: 66.666% !important; }
+            @page { margin: 0.6cm; }
         }
     </style>
 </head>
 <body>
 
-<div class="container-fluid p-0">
-    <div class="cv-wrapper">
+<div class="container cv-container p-0 my-4">
+    <!-- Background element top -->
+    <div class="bg-shape-top d-print-none"></div>
+    
+    <div class="cv-content">
+        <!-- HEADER ROW -->
+        <div class="header-section">
+            <h1 class="candidate-name">Dalia DEGUENONVO</h1>
+            <div class="candidate-title">BSc Student in Statistics & Computer Science</div>
+        </div>
+
+        <!-- MAIN BODY ROW -->
         <div class="row g-0">
             
-            <!-- COLONNE GAUCHE (Compétences & Infos secondaires) -->
-            <div class="col-lg-4 left-column">
-                <h2 class="section-title">STATISTIQUES & ANALYSE <i class="bi bi-bar-chart-line"></i></h2>
-                <hr class="section-hr">
+            <!-- LEFT COLUMN (Contact, Education, Skills, Languages, Interests) -->
+            <div class="col-md-4 left-side">
                 
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span><i class="bi bi-calculator me-2"></i>Modélisation & Régression</span>
-                        <span>75%</span>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 75%"></div>
-                    </div>
-                    <small class="skill-desc">Économétrie, Régressions, Tests de Student, Analyse des résidus</small>
+                <h2 class="section-title">CONTACT <i class="bi bi-person-vcard-fill section-logo"></i></h2>
+                <hr class="section-divider">
+                <div class="contact-list small mb-4">
+                    <div class="mb-2 text-truncate"><i class="bi bi-envelope-fill me-1"></i><a href="mailto:deguenonvodalia2@gmail.com">deguenonvodalia2@gmail.com</a></div>
+                    <div class="mb-2"><i class="bi bi-telephone-fill me-1"></i>+229 01 67 01 47 13</div>
+                    <div class="mb-2 text-truncate"><i class="bi bi-github me-1"></i><a href="https://github.com/daliaxdev" target="_blank">github.com/daliaxdev</a></div>
+                    <div class="mb-2"><i class="bi bi-geo-alt-fill me-1"></i>Abomey-Calavi, Benin</div>
                 </div>
 
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span><i class="bi bi-graph-up-arrow me-2"></i>Analyse Numérique</span>
-                        <span>80%</span>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 80%"></div>
-                    </div>
-                    <small class="skill-desc">Méthode de Newton, Résolution et optimisation de systèmes</small>
-                </div>
-
-                <h2 class="section-title mt-5">INFORMATIQUE & OUTILS <i class="bi bi-sliders"></i></h2>
-                <hr class="section-hr">
+                <h2 class="section-title">EDUCATION <i class="bi bi-mortarboard-fill section-logo"></i></h2>
+                <hr class="section-divider">
                 
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span><i class="bi bi-code-slash me-2"></i>Programmation</span>
-                        <span>85%</span>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 85%"></div>
-                    </div>
-                    <small class="skill-desc">Java (POO), PHP, Python, JavaScript, HTML, CSS</small>
+                <div class="item-block mb-3">
+                    <div class="item-company">African School of Economics (ASE)</div>
+                    <div class="item-role">BSc in Statistics & CS (Y2)</div>
+                    <div class="item-duration">2024 - 2026</div>
                 </div>
 
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span><i class="bi bi-vector-pen me-2"></i>Conception & UI</span>
-                        <span>75%</span>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 75%"></div>
-                    </div>
-                    <small class="skill-desc">UI/UX Design, UML, PlantUML, Bootstrap, AdminLTE</small>
+                <div class="item-block mb-4">
+                    <div class="item-company">Collège Catholique de La Salle</div>
+                    <div class="item-role">High School Diploma (Série D)</div>
+                    <div class="item-duration">2023 - 2024</div>
                 </div>
 
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span><i class="bi bi-database me-2"></i>Bases de données</span>
-                        <span>80%</span>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 80%"></div>
-                    </div>
-                    <small class="skill-desc">SQL, MySQL, Serveurs locaux (WampServer)</small>
+                <h2 class="section-title">EXPERTISE <i class="bi bi-code-slash section-logo"></i></h2>
+                <hr class="section-divider">
+                <div class="mb-4 small">
+                    <div class="tech-category">Programming:</div>
+                    <div class="text-dark mb-2">Java (OOP), PHP, Python, JavaScript, HTML5, CSS3</div>
+                    
+                    <div class="tech-category">Data & Analytics:</div>
+                    <div class="text-dark mb-2">Econometrics, Regression, T-tests, Numerical Analysis</div>
+                    
+                    <div class="tech-category">Databases & Tools:</div>
+                    <div class="text-dark">SQL, MySQL, Bootstrap 5, AdminLTE, WampServer, Git, GitHub, UML, Android Studio</div>
                 </div>
 
-                <div class="skill-item">
-                    <div class="skill-info">
-                        <span><i class="bi bi-tools me-2"></i>Outils & IDEs</span>
-                        <span>75%</span>
-                    </div>
-                    <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 75%"></div>
-                    </div>
-                    <small class="skill-desc">Git, GitHub, VS Code, Android Studio, NetBeans</small>
+                <h2 class="section-title">LANGUES <i class="bi bi-translate section-logo"></i></h2>
+                <hr class="section-divider">
+                <div class="mb-4 small">
+                    <div class="tag-item"><i class="bi bi-caret-right-fill me-2"></i><span><b>Français :</b> Langue maternelle / bilingue</span></div>
+                    <div class="tag-item"><i class="bi bi-caret-right-fill me-2"></i><span><b>Anglais :</b> Professionnel</span></div>
+                    <div class="tag-item"><i class="bi bi-caret-right-fill me-2"></i><span><b>Fon :</b> Native</span></div>
                 </div>
 
-                <h2 class="section-title mt-5">LANGUES <i class="bi bi-translate"></i></h2>
-                <hr class="section-hr">
-                <ul class="custom-list">
-                    <li><i class="bi bi-check-circle-fill"></i><b>Français :</b> Courant / Enseignement</li>
-                    <li><i class="bi bi-check-circle-fill"></i><b>Anglais :</b> Bilingue</li>
-                    <li><i class="bi bi-check-circle-fill"></i><b>Fon :</b> Maternelle</li>
-                </ul>
-
-                <h2 class="section-title mt-5">CENTRES D'INTÉRÊT <i class="bi bi-heart"></i></h2>
-                <hr class="section-hr">
-                <div class="d-flex flex-wrap pt-1">
-                    <span class="interest-badge"><i class="bi bi-code-square"></i> Programmation & Modélisation</span>
-                    <span class="interest-badge"><i class="bi bi-palette"></i> Dessin & Peinture</span>
-                    <span class="interest-badge"><i class="bi bi-activity"></i> Tennis</span>
-                    <span class="interest-badge"><i class="bi bi-cpu"></i> Intelligence Artificielle</span>
-                    <span class="interest-badge"><i class="bi bi-book"></i> Lecture</span>
+                <h2 class="section-title">INTÉRÊTS <i class="bi bi-heart-fill section-logo"></i></h2>
+                <hr class="section-divider">
+                <div class="small mb-4">
+                    <div class="tag-item"><i class="bi bi-chevron-right me-1"></i>Intelligence Artificielle</div>
+                    <div class="tag-item"><i class="bi bi-chevron-right me-1"></i>Modélisation quantitative</div>
+                    <div class="tag-item"><i class="bi bi-chevron-right me-1"></i>Dessin et peinture</div>
+                    <div class="tag-item"><i class="bi bi-chevron-right me-1"></i>Tennis et littérature</div>
                 </div>
+
             </div>
 
-            <!-- COLONNE DROITE (Identité sombre & Contenu principal) -->
-            <div class="col-lg-8 right-column">
+            <!-- RIGHT COLUMN (Profile summary, Projects, Certifications) -->
+            <div class="col-md-8 right-side">
                 
-                <!-- EN-TÊTE SOMBRE AVEC CONTACTS VERTS ÉMERAUDE -->
-                <div class="cv-header">
-                    <h1 class="text-white mb-2">Dalia DEGUENONVO</h1>
-                    <p class="lead mb-4">Étudiante en Informatique & Statistiques</p>
-                    <hr class="opacity-25 my-3">
-                    <div class="row g-3 small">
-                        <div class="col-sm-6"><i class="bi bi-envelope-fill me-2"></i><a href="mailto:deguenonvodalia2@gmail.com">deguenonvodalia2@gmail.com</a></div>
-                        <div class="col-sm-6"><i class="bi bi-telephone-fill me-2"></i>+229 01 67 01 47 13</div>
-                        <div class="col-sm-6"><i class="bi bi-github me-2"></i><a href="https://github.com/daliaxdev" target="_blank">Voir mon GitHub</a></div>
-                        <div class="col-sm-6"><i class="bi bi-geo-alt-fill me-2"></i>Abomey-Calavi, Bénin</div>
-                    </div>
-                </div>
-
-                <!-- Résumé -->
-                <h2 class="section-title">RÉSUMÉ <i class="bi bi-file-earmark-person"></i></h2>
-                <hr class="section-hr">
-                <p class="text-muted lh-base">
-                    Passionnée par le développement d'applications et les technologies de l'information, je combine rigueur académique, modélisation quantitative et projets pratiques. Spécialisée en génie logiciel et back-end, je conçois des architectures de bases de données structurées et des interfaces dynamiques pour répondre à des besoins réels.
+                <h2 class="section-title">PROFILE <i class="bi bi-person-fill section-logo"></i></h2>
+                <hr class="section-divider">
+                <p class="item-text mb-4">
+                    Rigorous and analytical Computer Science and Statistics student with a strong foundation in quantitative analysis, software engineering, and database management. Proven capability in developing end-to-end web architectures and deploying data-driven solutions. Highly adaptable and eager to contribute to international development goals, multi-stakeholder initiatives, and impact-oriented technological frameworks.
                 </p>
 
-                <!-- Formation -->
-                <h2 class="section-title mt-5">FORMATION <i class="bi bi-mortarboard"></i></h2>
-                <hr class="section-hr">
-                
-                <div class="mb-4">
-                    <div class="item-row">
-                        <div class="item-title-block">
-                            <h5 class="fw-bold mb-1 text-dark"><a href="#" class="text-primary">African School of Economics (ASE)</a></h5>
-                            <p class="mb-0 text-muted small">Licence 2 en Statistique Informatique — <i>Abomey-Calavi</i></p>
-                        </div>
-                        <div>
-                            <span class="badge date-badge">2024 - 2026</span>
-                        </div>
-                    </div>
-                    <small class="text-muted d-block mt-2">Cursus interdisciplinaire mêlant science des données, économie appliquée, recherche opérationnelle et ingénierie logicielle.</small>
+                <h2 class="section-title">WORK EXPERIENCE / PROJECTS <i class="bi bi-briefcase-fill section-logo"></i></h2>
+                <hr class="section-divider">
+
+                <div class="item-block">
+                    <div class="item-company">SchoolMate — Mobile Academic Tracking Application</div>
+                    <div class="item-duration">Academic & Software Project | 2026</div>
+                    <p class="item-text">
+                        Designed and co-developed a mobile application ecosystem aiming to digitalize pedagogical monitoring and bridge the gap between students, parents, and academic administrations within the Beninese educational framework. Implemented modular UI workflows and relational cross-referencing.
+                    </p>
                 </div>
 
-                <div class="mb-4">
-                    <div class="item-row">
-                        <div class="item-title-block">
-                            <h5 class="fw-bold mb-1 text-dark"><a href="#" class="text-primary">Collège Catholique St Jean Baptiste de La Salle</a></h5>
-                            <p class="mb-0 text-muted small">Baccalauréat Série D — <i>Akassato</i></p>
-                        </div>
-                        <div>
-                            <span class="badge date-badge">2023 - 2024</span>
-                        </div>
-                    </div>
-                    <small class="text-muted d-block mt-2">Formation scientifique axée sur les mathématiques, les sciences de la vie et de la terre, et les sciences physiques.</small>
+                <div class="item-block">
+                    <div class="item-company">ImmoBénin — Relational Real Estate Web Portal</div>
+                    <div class="item-duration">Academic & Software Project | 2026</div>
+                    <p class="item-text">
+                        Built a comprehensive dynamic property portal using PHP, MySQL, and AdminLTE. Engineered structural database schemas for property classification, user query management, and automated listings filtering across nationwide geographical zones.
+                    </p>
                 </div>
 
-                <!-- Certifications -->
-                <h2 class="section-title mt-5">CERTIFICATIONS <i class="bi bi-patch-check"></i></h2>
-                <hr class="section-hr">
-                <ul class="custom-list">
-                    <li class="item-row mb-3">
-                        <div class="item-title-block">
-                            <i class="bi bi-check-circle-fill me-2"></i><b>Applied Data Science Lab</b> — WorldQuant University
-                        </div>
-                        <span class="badge date-badge">En cours</span>
-                    </li>
-                    <li class="item-row mb-3">
-                        <div class="item-title-block">
-                            <i class="bi bi-check-circle-fill me-2"></i><b>Algorithmes & Structures de Données JavaScript</b> — freeCodeCamp
-                        </div>
-                        <span class="badge date-badge">En cours</span>
-                    </li>
-                    <li class="item-row mb-3">
-                        <div class="item-title-block">
-                            <i class="bi bi-check-circle-fill me-2"></i><b>Développement Web Fondations & SQL</b> — freeCodeCamp / OpenClassrooms
-                        </div>
-                        <span class="badge date-badge">En cours</span>
-                    </li>
-                </ul>
-
-                <!-- Projets Académiques -->
-                <h2 class="section-title mt-5">PROJETS ACADÉMIQUES <i class="bi bi-journal-code"></i></h2>
-                <hr class="section-hr">
-
-                <div class="mb-4">
-                    <div class="item-row mb-1">
-                        <div class="item-title-block">
-                            <h6 class="fw-bold mb-0 text-dark">Application mobile de suivi scolaire (SchoolMate)</h6>
-                        </div>
-                        <span class="badge date-badge">2026</span>
-                    </div>
-                    <p class="text-muted small mb-0">Conception d'une application de suivi scolaire connectant élèves, parents et enseignants. Objectif de renforcement du lien école-famille en numérisant le suivi pédagogique des élèves au Bénin.</p>
+                <div class="item-block mb-4">
+                    <div class="item-company">Customer Behavioral Data Analytics Platform</div>
+                    <div class="item-duration">Academic & Software Project | 2026</div>
+                    <p class="item-text">
+                        Developed a modular Python utility executing sequential pattern mining and segmentation algorithms. Applied data analysis principles to map shopping lifecycles and evaluate customer predictive metrics.
+                    </p>
                 </div>
 
-                <div class="mb-4">
-                    <div class="item-row mb-1">
-                        <div class="item-title-block">
-                            <h6 class="fw-bold mb-0 text-dark">Création de site web : Portail immobilier (ImmoBénin)</h6>
-                        </div>
-                        <span class="badge date-badge">2026</span>
+                <h2 class="section-title">CERTIFICATIONS <i class="bi bi-patch-check-fill section-logo"></i></h2>
+                <hr class="section-divider">
+                <div class="small">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span><i class="bi bi-check-circle-fill text-danger me-2"></i><b>Applied Data Science Lab</b> — WorldQuant University</span>
+                        <span class="text-dark fst-italic">In Progress</span>
                     </div>
-                    <p class="text-muted small mb-0">Conception d’un portail immobilier permettant aux particuliers et agences de publier et rechercher des annonces de vente ou locations de biens (maisons, appartements, terrains, locaux commerciaux) à travers le Bénin.</p>
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span><i class="bi bi-check-circle-fill text-danger me-2"></i><b>JavaScript Algorithms and Data Structures</b> — freeCodeCamp</span>
+                        <span class="text-dark fst-italic">In Progress</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span><i class="bi bi-check-circle-fill text-danger me-2"></i><b>Web Development Foundations & SQL</b> — OpenClassrooms</span>
+                        <span class="text-dark fst-italic">In Progress</span>
+                    </div>
                 </div>
 
-                <div class="mb-4">
-                    <div class="item-row mb-1">
-                        <div class="item-title-block">
-                            <h6 class="fw-bold mb-0 text-dark">Projet Logiciel Python : Analyse du Comportement Client</h6>
-                        </div>
-                        <span class="badge date-badge">2026</span>
-                    </div>
-                    <p class="text-muted small mb-0">Mise en œuvre d'algorithmes de segmentation, de fouille séquentielle et de modélisation prédictive pour l'analyse des parcours d'achat et la prédiction des comportements clients.</p>
-                </div>
             </div>
 
         </div>
     </div>
+    
+    <!-- Background element bottom -->
+    <div class="bg-shape-footer"></div>
 </div>
 
 </body>
