@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Dalia Ifêmi Deguenonvo</title>
-    <!-- Chargement de Bootstrap via CDN (Fonctionne partout, même sur GitHub Pages) -->
+    <!-- Chargement de Bootstrap via CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Icones Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -14,11 +14,37 @@
             color: #333;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+        /* Utilisation de toute la largeur de l'écran */
         .cv-wrapper {
             background-color: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
-            overflow: hidden;
+            min-height: 100vh;
+        }
+        /* En-tête sombre stylisé uniquement pour la colonne de droite */
+        .cv-header {
+            background-color: #232936;
+            color: #ffffff;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+        .cv-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        .cv-header .lead {
+            color: #a0aec0 !important;
+            font-size: 1.1rem;
+        }
+        .cv-header a {
+            color: #ffffff !important;
+            text-decoration: none;
+        }
+        .cv-header a:hover {
+            text-decoration: underline !important;
+        }
+        .cv-header i {
+            color: #3b82f6 !important; /* Couleur bleue pour les icônes de contacts comme lui */
         }
         /* Colonne de gauche (Gris clair / Tech) */
         .left-column {
@@ -30,9 +56,9 @@
         .right-column {
             padding: 3rem 2.5rem;
         }
-        /* Titres de sections personnalisés */
+        /* Titres de sections */
         h2.section-title {
-            font-size: 1.25rem;
+            font-size: 1.4rem;
             font-weight: 700;
             color: #212529;
             text-transform: uppercase;
@@ -44,13 +70,31 @@
             margin-bottom: 0.2rem;
         }
         h2.section-title i {
-            color: #115c3a;
+            color: #4f46e5;
         }
         hr.section-hr {
             margin-top: 0;
             margin-bottom: 1.5rem;
-            opacity: 0.15;
-            border-top: 2px solid #212529;
+            opacity: 0.2;
+            border-top: 2px solid #4f46e5;
+        }
+        /* Alignement forcé pour les lignes (Titre à gauche, Badge à droite) */
+        .item-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+        }
+        .item-title-block {
+            padding-right: 10px;
+        }
+        /* Style des badges de date */
+        .date-badge {
+            font-size: 0.8rem !important;
+            font-weight: 600;
+            padding: 0.4rem 0.6rem;
+            white-space: nowrap;
+            background-color: #4f46e5 !important;
         }
         /* Barres de progression */
         .skill-item {
@@ -60,7 +104,7 @@
             display: flex;
             justify-content: space-between;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             margin-bottom: 0.3rem;
         }
         .progress {
@@ -69,16 +113,16 @@
             background-color: #e9ecef;
         }
         .progress-bar {
-            background-color: #115c3a;
+            background-color: #4f46e5;
             border-radius: 4px;
         }
         .skill-desc {
-            font-size: 0.8rem;
+            font-size: 0.85rem;
             color: #6c757d;
             display: block;
             margin-top: 0.2rem;
         }
-        /* Listes épurées */
+        /* Listes */
         .custom-list {
             list-style: none;
             padding-left: 0;
@@ -87,9 +131,8 @@
             margin-bottom: 0.7rem;
             font-size: 0.95rem;
         }
-        /* Toutes les icônes de listes, de lignes et de contact en Vert Émeraude */
-        .custom-list i, .skill-info i, .contact-icon {
-            color: #115c3a !important;
+        .custom-list i, .skill-info i {
+            color: #4f46e5 !important;
         }
         .interest-badge {
             display: inline-block;
@@ -102,32 +145,26 @@
             font-weight: 500;
         }
         .interest-badge i {
-            color: #115c3a;
+            color: #4f46e5;
         }
-        /* Forcer l'application du vert sur les liens et badges Bootstrap */
         .text-primary {
-            color: #115c3a !important;
+            color: #4f46e5 !important;
             text-decoration: none;
         }
         a.text-primary:hover {
-            color: #198754 !important;
             text-decoration: underline !important;
-        }
-        .bg-primary {
-            background-color: #115c3a !important;
         }
     </style>
 </head>
 <body>
 
-<div class="container my-5">
+<div class="container-fluid p-0">
     <div class="cv-wrapper">
         <div class="row g-0">
             
             <!-- COLONNE GAUCHE -->
             <div class="col-lg-4 left-column">
-                <!-- Compétences : Statistiques & Analyse -->
-                <h2 class="section-title">Statistiques & Analyse <i class="bi bi-bar-chart-line"></i></h2>
+                <h2 class="section-title">STATISTIQUES & ANALYSE <i class="bi bi-bar-chart-line"></i></h2>
                 <hr class="section-hr">
                 
                 <div class="skill-item">
@@ -136,7 +173,7 @@
                         <span>75%</span>
                     </div>
                     <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar" role="progressbar" style="width: 75%"></div>
                     </div>
                     <small class="skill-desc">Économétrie, Régressions, Tests de Student, Analyse des résidus</small>
                 </div>
@@ -147,13 +184,12 @@
                         <span>80%</span>
                     </div>
                     <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar" role="progressbar" style="width: 80%"></div>
                     </div>
                     <small class="skill-desc">Méthode de Newton, Résolution et optimisation de systèmes</small>
                 </div>
 
-                <!-- Compétences : Informatique & Outils -->
-                <h2 class="section-title mt-4">Informatique & Outils <i class="bi bi-sliders"></i></h2>
+                <h2 class="section-title mt-5">INFORMATIQUE & OUTILS <i class="bi bi-sliders"></i></h2>
                 <hr class="section-hr">
                 
                 <div class="skill-item">
@@ -162,7 +198,7 @@
                         <span>85%</span>
                     </div>
                     <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar" role="progressbar" style="width: 85%"></div>
                     </div>
                     <small class="skill-desc">Java (POO), PHP, Python, JavaScript, HTML, CSS</small>
                 </div>
@@ -173,7 +209,7 @@
                         <span>75%</span>
                     </div>
                     <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar" role="progressbar" style="width: 75%"></div>
                     </div>
                     <small class="skill-desc">UI/UX Design, UML, PlantUML, Bootstrap, AdminLTE</small>
                 </div>
@@ -184,7 +220,7 @@
                         <span>80%</span>
                     </div>
                     <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar" role="progressbar" style="width: 80%"></div>
                     </div>
                     <small class="skill-desc">SQL, MySQL, Serveurs locaux (WampServer)</small>
                 </div>
@@ -195,109 +231,137 @@
                         <span>75%</span>
                     </div>
                     <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar" role="progressbar" style="width: 75%"></div>
                     </div>
                     <small class="skill-desc">Git, GitHub, VS Code, Android Studio, NetBeans</small>
                 </div>
 
-                <!-- Langues -->
-                <h2 class="section-title mt-4">Langues <i class="bi bi-translate"></i></h2>
+                <h2 class="section-title mt-5">LANGUES <i class="bi bi-translate"></i></h2>
                 <hr class="section-hr">
                 <ul class="custom-list">
-                    <li><i class="bi bi-check-circle-fill"></i><b>Français :</b> Courant / Enseignement</li>
-                    <li><i class="bi bi-check-circle-fill"></i><b>Anglais :</b> Bilingue</li>
-                    <li><i class="bi bi-check-circle-fill"></i><b>Fon :</b> Maternelle</li>
+                    <li><i class="bi bi-caret-right-fill"></i><b>Français :</b> Courant / Enseignement</li>
+                    <li><i class="bi bi-caret-right-fill"></i><b>Anglais :</b> Bilingue</li>
+                    <li><i class="bi bi-caret-right-fill"></i><b>Fon :</b> Maternelle</li>
                 </ul>
 
-                <!-- Centres d'intérêt -->
-                <h2 class="section-title mt-4">Centres d'intérêt <i class="bi bi-heart"></i></h2>
+                <h2 class="section-title mt-5">CENTRES D'INTÉRÊT <i class="bi bi-heart"></i></h2>
                 <hr class="section-hr">
                 <div class="d-flex flex-wrap pt-1">
                     <span class="interest-badge"><i class="bi bi-code-square"></i> Programmation & Modélisation</span>
                     <span class="interest-badge"><i class="bi bi-palette"></i> Dessin & Peinture</span>
                     <span class="interest-badge"><i class="bi bi-activity"></i> Tennis</span>
-                    <span class="interest-badge"><i class="bi bi-activity"></i> Intelligence Artificielle</span>
-                    <span class="interest-badge"><i class="bi bi-activity"></i> Lecture</span>
+                    <span class="interest-badge"><i class="bi bi-cpu"></i> Intelligence Artificielle</span>
+                    <span class="interest-badge"><i class="bi bi-book"></i> Lecture</span>
                 </div>
             </div>
 
             <!-- COLONNE DROITE -->
             <div class="col-lg-8 right-column">
-                <!-- En-tête Identité -->
-                <div class="mb-4">
-                    <h1 class="display-5 fw-bold text-dark mb-1">Dalia DEGUENONVO</h1>
-                    <p class="lead text-muted fw-semibold mb-3">Étudiante en Informatique & Statistiques</p>
-                    <hr>
-                    <div class="row g-2 small text-muted">
-                        <div class="col-sm-6"><i class="bi bi-envelope-fill me-2 contact-icon"></i>deguenonvodalia2@gmail.com</div>
-                        <div class="col-sm-6"><i class="bi bi-geo-alt-fill me-2 contact-icon"></i>Abomey-Calavi, Bénin</div>
-                        <div class="col-sm-6"><i class="bi bi-github me-2 contact-icon"></i><a href="https://github.com/daliaxdev" target="_blank" class="text-muted text-decoration-none">Voir mon GitHub</a></div>
-                        <div class="col-sm-6"><i class="bi bi-linkedin me-2 contact-icon"></i><a href="https://www.linkedin.com/in/dalia-deguenonvo-414b23374?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" class="text-muted text-decoration-none">Voir mon LinkedIn</a></div>
+                
+                <!-- EN-TÊTE SOMBRE INTEGRÉ À DROITE -->
+                <div class="cv-header">
+                    <h1 class="text-white mb-2">Dalia DEGUENONVO</h1>
+                    <p class="lead mb-4">Étudiante en Informatique & Statistiques</p>
+                    <hr class="opacity-25 my-3">
+                    <div class="row g-3 small">
+                        <div class="col-sm-6"><i class="bi bi-envelope-fill me-2"></i><a href="mailto:deguenonvodalia2@gmail.com">deguenonvodalia2@gmail.com</a></div>
+                        <div class="col-sm-6"><i class="bi bi-telephone-fill me-2"></i>+229 XX XX XX XX</div>
+                        <div class="col-sm-6"><i class="bi bi-github me-2"></i><a href="https://github.com/daliaxdev" target="_blank">Voir mon GitHub</a></div>
+                        <div class="col-sm-6"><i class="bi bi-geo-alt-fill me-2"></i>Abomey-Calavi, Bénin</div>
                     </div>
                 </div>
 
                 <!-- Résumé -->
-                <h2 class="section-title">Résumé <i class="bi bi-file-earmark-person"></i></h2>
+                <h2 class="section-title">RÉSUMÉ <i class="bi bi-file-earmark-person"></i></h2>
                 <hr class="section-hr">
                 <p class="text-muted lh-base">
                     Passionnée par le développement d'applications et les technologies de l'information, je combine rigueur académique, modélisation quantitative et projets pratiques. Spécialisée en génie logiciel et back-end, je conçois des architectures de bases de données structurées et des interfaces dynamiques pour répondre à des besoins réels.
                 </p>
 
                 <!-- Formation -->
-                <h2 class="section-title">Formation <i class="bi bi-mortarboard"></i></h2>
+                <h2 class="section-title mt-5">FORMATION <i class="bi bi-mortarboard"></i></h2>
                 <hr class="section-hr">
                 
                 <div class="mb-4">
-                    <div class="d-flex justify-content-between align-items-center flex-wrap">
-                        <h5 class="fw-bold mb-0 text-dark">Licence 2 en Statistique Informatique</h5>
-                        <span class="badge bg-primary text-white fw-bold px-3 py-2">2024 - 2026</span>
+                    <div class="item-row">
+                        <div class="item-title-block">
+                            <h5 class="fw-bold mb-1 text-dark"><a href="#" class="text-primary">African School of Economics (ASE)</a></h5>
+                            <p class="mb-0 text-muted small">Licence 2 en Statistique Informatique — <i>Abomey-Calavi</i></p>
+                        </div>
+                        <div>
+                            <span class="badge date-badge">2024 - 2026</span>
+                        </div>
                     </div>
-                    <p class="mb-1 fw-semibold"><a href="#" target="_blank" class="text-primary">African School of Economics (ASE)</a></p>
-                    <small class="text-muted d-block">Cursus interdisciplinaire mêlant science des données, économie appliquée, recherche opérationnelle et ingénierie logicielle.</small>
+                    <small class="text-muted d-block mt-2">Cursus interdisciplinaire mêlant science des données, économie appliquée, recherche opérationnelle et ingénierie logicielle.</small>
                 </div>
 
-                <div class="mb-3">
-                    <div class="d-flex justify-content-between align-items-center flex-wrap">
-                        <h5 class="fw-bold mb-0 text-dark">Baccalauréat Série D</h5>
-                        <span class="badge bg-primary text-white fw-bold px-3 py-2">2023 - 2024</span>
+                <div class="mb-4">
+                    <div class="item-row">
+                        <div class="item-title-block">
+                            <h5 class="fw-bold mb-1 text-dark"><a href="#" class="text-primary">Collège Catholique St Jean Baptiste de La Salle</a></h5>
+                            <p class="mb-0 text-muted small">Baccalauréat Série D — <i>Akassato</i></p>
+                        </div>
+                        <div>
+                            <span class="badge date-badge">2023 - 2024</span>
+                        </div>
                     </div>
-                    <p class="mb-1 fw-semibold"><a href="#" target="_blank" class="text-primary">Collège Catholique St Jean Baptiste de La Salle (Akassato)</a></p>
-                    <small class="text-muted d-block">Formation scientifique axée sur les mathématiques, les sciences de la vie et de la terre, et les sciences physiques.</small>
+                    <small class="text-muted d-block mt-2">Formation scientifique axée sur les mathématiques, les sciences de la vie et de la terre, et les sciences physiques.</small>
                 </div>
 
                 <!-- Certifications -->
-                <h2 class="section-title">Certifications <i class="bi bi-patch-check"></i></h2>
+                <h2 class="section-title mt-5">CERTIFICATIONS <i class="bi bi-patch-check"></i></h2>
                 <hr class="section-hr">
                 <ul class="custom-list">
-                    <li><i class="bi bi-hourglass-split text-warning"></i><b>Applied Data Science Lab</b> — WorldQuant University <span class="badge bg-primary text-white fw-bold ms-2 px-2 py-1">En cours</span></li>
-                    <li><i class="bi bi-hourglass-split text-warning"></i><b>Algorithmes & Structures de Données JavaScript</b> — freeCodeCamp <span class="badge bg-primary text-white fw-bold ms-2 px-2 py-1">En cours</span></li>
-                    <li><i class="bi bi-hourglass-split text-warning"></i><b>Développement Web Fondations & SQL</b> — freeCodeCamp / OpenClassrooms <span class="badge bg-primary text-white fw-bold ms-2 px-2 py-1">En cours</span></li>
+                    <li class="item-row mb-3">
+                        <div class="item-title-block">
+                            <i class="bi bi-check-circle-fill me-2"></i><b>Applied Data Science Lab</b> — WorldQuant University
+                        </div>
+                        <span class="badge date-badge">En cours</span>
+                    </li>
+                    <li class="item-row mb-3">
+                        <div class="item-title-block">
+                            <i class="bi bi-check-circle-fill me-2"></i><b>Algorithmes & Structures de Données JavaScript</b> — freeCodeCamp
+                        </div>
+                        <span class="badge date-badge">En cours</span>
+                    </li>
+                    <li class="item-row mb-3">
+                        <div class="item-title-block">
+                            <i class="bi bi-check-circle-fill me-2"></i><b>Développement Web Fondations & SQL</b> — freeCodeCamp / OpenClassrooms
+                        </div>
+                        <span class="badge date-badge">En cours</span>
+                    </li>
                 </ul>
 
                 <!-- Projets Académiques -->
-                <h2 class="section-title">Projets Académiques <i class="bi bi-journal-code"></i></h2>
+                <h2 class="section-title mt-5">PROJETS ACADÉMIQUES <i class="bi bi-journal-code"></i></h2>
                 <hr class="section-hr">
 
-                <div class="card p-3 mb-3 bg-light border-0">
-                    <div class="d-flex justify-content-between align-items-center flex-wrap mb-1">
-                        <h6 class="fw-bold mb-0 text-dark">Application mobile de suivi scolaire (SchoolMate)</h6>
-                        <span class="badge bg-primary text-white fw-bold px-2 py-1">2026</span>
+                <div class="mb-4">
+                    <div class="item-row mb-1">
+                        <div class="item-title-block">
+                            <h6 class="fw-bold mb-0 text-dark">Application mobile de suivi scolaire (SchoolMate)</h6>
+                        </div>
+                        <span class="badge date-badge">2026</span>
                     </div>
                     <p class="text-muted small mb-0">Conception d'une application de suivi scolaire connectant élèves, parents et enseignants. Objectif de renforcement du lien école-famille en numérisant le suivi pédagogique des élèves au Bénin.</p>
                 </div>
 
-                <div class="card p-3 mb-3 bg-light border-0">
-                    <div class="d-flex justify-content-between align-items-center flex-wrap mb-1">
-                        <h6 class="fw-bold mb-0 text-dark">Création de site web : Portail immobilier (ImmoBénin)</h6>
-                        <span class="badge bg-primary text-white fw-bold px-2 py-1">2026</span>
+                <div class="mb-4">
+                    <div class="item-row mb-1">
+                        <div class="item-title-block">
+                            <h6 class="fw-bold mb-0 text-dark">Création de site web : Portail immobilier (ImmoBénin)</h6>
+                        </div>
+                        <span class="badge date-badge">2026</span>
                     </div>
                     <p class="text-muted small mb-0">Conception d’un portail immobilier permettant aux particuliers et agences de publier et rechercher des annonces de vente ou locations de biens (maisons, appartements, terrains, locaux commerciaux) à travers le Bénin.</p>
                 </div>
 
-                <div class="card p-3 mb-3 bg-light border-0">
-                    <div class="d-flex justify-content-between align-items-center flex-wrap mb-1">
-                        <h6 class="fw-bold mb-0 text-dark">Projet Logiciel Python : Analyse du Comportement Client</h6>
-                        <span class="badge bg-primary text-white fw-bold px-2 py-1">2026</span>
+                <div class="mb-4">
+                    <div class="item-row mb-1">
+                        <div class="item-title-block">
+                            <h6 class="fw-bold mb-0 text-dark">Projet Logiciel Python : Analyse du Comportement Client</h6>
+                        </div>
+                        <span class="badge date-badge">2026</span>
                     </div>
                     <p class="text-muted small mb-0">Mise en œuvre d'algorithmes de segmentation, de fouille séquentielle et de modélisation prédictive pour l'analyse des parcours d'achat et la prédiction des comportements clients.</p>
                 </div>
